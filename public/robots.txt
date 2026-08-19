@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://camilavalenca.com.br/sitemap.xml
