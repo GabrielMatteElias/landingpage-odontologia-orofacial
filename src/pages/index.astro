@@ -5,6 +5,7 @@ import BeforeAfter from "../components/BeforeAfter.astro";
 import Footer from "../components/Footer.astro";
 import heroPortrait from "../assets/hero.webp";
 import profileImg from "../assets/profile.webp";
+import whatsImg from "../assets/whatsapp.webp";
 import { site, whatsappUrl, treatments, faqs, posts } from "../data";
 import "../styles/global.css";
 import Location from "../components/Location.astro";
@@ -412,13 +413,16 @@ const schema = {
             </section>
         </main>
         <a
-            class="whatsapp-float focus-ring"
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            aria-label="Agendar atendimento pelo WhatsApp"
+            aria-label="Falar no WhatsApp"
+            class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition hover:scale-110 focus-visible:outline-white"
+            style="animation: rise .6s .5s both"
         >
-            <span aria-hidden="true">↗</span>
+            <Image src={whatsImg} alt="Whatsapp" class="h-8 w-8 object-contain" />
+
+            <span class="sr-only">WhatsApp</span>
         </a>
         <Footer />
     </body>
