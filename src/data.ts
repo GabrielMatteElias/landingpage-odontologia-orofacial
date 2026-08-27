@@ -11,7 +11,7 @@ export const site = {
   specialty: 'Estética e bem-estar com propósito',
   positioning: 'Resultados naturais que realçam a sua melhor versão.',
   whatsapp: '555134074354',
-  phoneDisplay: '(51) 934074-354',
+  phoneDisplay: '(51) 93407-4354',
   whatsappMessage: 'Olá! Gostaria de agendar um atendimento com a Dra. Miriam Kuhn.',
   instagram: 'https://www.instagram.com/dra.miriamkuhn',
   seoTitle: 'Dra. Miriam Kuhn | Estética e bem-estar com propósito',
@@ -47,7 +47,7 @@ export const treatments = [
 export const location = {
   googleMapsUrl:
     'https://www.google.com/local/place/fid/0x951979000d4ba5fb:0xa70b017b7637766b/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DWiWaVch70QXZkRNZ14lLPQ%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D310.353%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFldpV2FWY2g3MFFYWmtSTloxNGxMUFE%3D&sa=X&ved=2ahUKEwjHj8P1pr6WAxVPD7kGHYo1IHYQpx96BAgjEAU',
-  address: 'Rua Dr. Vale, 22, Porto Alegre - RS',
+  address: 'Rua Dr. Vale, 22 — Moinhos de Vento, Porto Alegre — RS',
   openingHours: 'Segunda a sexta, 9h às 18h',
 }
 
