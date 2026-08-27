@@ -6,6 +6,7 @@ import post4Img from './assets/post4.webp';
 export const site = {
   professional: 'Dra. Miriam Kuhn',
   brand: 'Miriam Kuhn',
+  clinic: 'Laser Start',
   initials: 'MK',
   specialty: 'Estética e bem-estar com propósito',
   positioning: 'Resultados naturais que realçam a sua melhor versão.',
@@ -42,6 +43,13 @@ export const treatments = [
     text: 'Cuidado conduzido com propósito, escuta e orientação clara antes de qualquer procedimento.',
   },
 ];
+
+export const location = {
+  googleMapsUrl:
+    'https://www.google.com/local/place/fid/0x951979000d4ba5fb:0xa70b017b7637766b/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DWiWaVch70QXZkRNZ14lLPQ%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D310.353%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFldpV2FWY2g3MFFYWmtSTloxNGxMUFE%3D&sa=X&ved=2ahUKEwjHj8P1pr6WAxVPD7kGHYo1IHYQpx96BAgjEAU',
+  address: 'Rua Dr. Vale, 22, Porto Alegre - RS',
+  openingHours: 'Segunda a sexta, 9h às 18h',
+}
 
 export const posts = [
   {

@@ -1,0 +1,54 @@
+---
+import { site, location, whatsappUrl } from '../data';
+---
+
+<section id="localizacao" class="section-pad bg-[color:var(--plum)] text-[color:var(--ivory)]">
+  <div class="container grid items-center gap-12 md:grid-cols-[.82fr_1.18fr] md:gap-20">
+    <div class="reveal">
+      <p class="eyebrow text-[color:var(--gold)]">Localizacao</p>
+      <h2 class="serif mt-5 text-5xl leading-none md:text-7xl">
+        Atendimento em Porto Alegre.
+      </h2>
+      <p class="mt-7 max-w-md text-base leading-7 text-[color:var(--muted-dark)]">
+        Uma experiencia de estetica facial conduzida com analise, acolhimento e planejamento personalizado.
+      </p>
+
+      <div class="mt-9 grid gap-5 border-y border-[color:var(--line-dark)] py-6">
+        <div>
+          <span class="eyebrow text-[color:var(--gold)]">Endereco</span>
+          <p class="mt-2 text-lg leading-7 text-[color:var(--ivory)]">{location.address}</p>
+        </div>
+        <div>
+          <span class="eyebrow text-[color:var(--gold)]">Horario</span>
+          <p class="mt-2 text-lg leading-7 text-[color:var(--ivory)]">{location.openingHours}</p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <a class="btn btn-gold" href={location.googleMapsUrl} target="_blank" rel="noreferrer">
+          Ver no mapa <span aria-hidden="true">↗</span>
+        </a>
+        <a class="btn btn-ghost" href={whatsappUrl} target="_blank" rel="noreferrer">
+          WhatsApp <span aria-hidden="true">↗</span>
+        </a>
+        <a class="btn btn-ghost" href={site.instagram} target="_blank" rel="noreferrer">
+          Instagram <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal overflow-hidden border border-[rgba(227,199,144,.28)] bg-[color:var(--obsidian)] p-2 shadow-[0_28px_70px_rgba(14,9,8,.28)]">
+      <iframe
+        title={`Mapa de localizacao - ${site.clinic}`}
+        width="100%"
+        height="100%"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        class="block aspect-[4/3] w-full bg-[color:var(--obsidian)] sm:aspect-[16/11] md:min-h-[520px]"
+        src={`https://maps.google.com/maps?q=${encodeURIComponent(location.address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+      ></iframe>
+    </div>
+  </div>
+</section>
