@@ -95,18 +95,6 @@ input:focus-visible {
   gap: .75rem;
 }
 
-.brand-monogram {
-  display: inline-grid;
-  min-width: 2.65rem;
-  height: 2.65rem;
-  place-items: center;
-  color: var(--gold);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.45rem;
-  font-weight: 600;
-  line-height: 1;
-}
-
 .btn {
   display: inline-flex;
   min-height: 48px;

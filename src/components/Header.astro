@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { site, whatsappUrl } from '../data';
+import logoImg from '../../public/logo.webp'
 ---
 
 <header
@@ -8,7 +10,14 @@ import { site, whatsappUrl } from '../data';
 >
   <div class="container flex h-[72px] items-center justify-between gap-5">
     <a href="#inicio" class="brand-mark leading-tight" aria-label={`${site.brand}, início`}>
-      <span class="brand-monogram">{site.initials}</span>
+      <span class="brand-monogram">
+        <Image
+          src={logoImg}
+          width={45}
+          alt="Logo Miriam Kuhn"
+          class="rounded-full"
+        />
+      </span>
       <span class="hidden sm:block">
         <span class="block serif text-[1.2rem]">{site.brand}</span>
         <span class="eyebrow text-[.5rem] text-[color:var(--gold)]">{site.specialty}</span>
