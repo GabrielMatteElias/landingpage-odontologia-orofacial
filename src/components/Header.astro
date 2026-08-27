@@ -1,19 +1,79 @@
 ---
 import { site, whatsappUrl } from '../data';
 ---
-<header class="site-header fixed top-0 z-30 w-full border-b border-transparent bg-[color:var(--paper)]/90 backdrop-blur-sm transition-colors" data-header>
-  <div class="container flex h-[76px] items-center justify-between gap-6">
-    <a href="#inicio" class="leading-tight" aria-label={`${site.brand}, início`}><span class="block serif text-[1.25rem]">Camila Valença</span><span class="eyebrow text-[.55rem]">Harmonização Orofacial</span></a>
+
+<header
+  class="site-header fixed top-0 z-30 w-full border-b border-transparent bg-[color:var(--obsidian)]/88 text-[color:var(--ivory)] backdrop-blur-md transition-colors"
+  data-header
+>
+  <div class="container flex h-[72px] items-center justify-between gap-5">
+    <a href="#inicio" class="brand-mark leading-tight" aria-label={`${site.brand}, início`}>
+      <span class="brand-monogram">{site.initials}</span>
+      <span class="hidden sm:block">
+        <span class="block serif text-[1.2rem]">{site.brand}</span>
+        <span class="eyebrow text-[.5rem] text-[color:var(--gold)]">{site.specialty}</span>
+      </span>
+    </a>
+
     <nav class="hidden items-center gap-7 lg:flex" aria-label="Navegação principal">
-      <a class="text-xs text-[color:var(--muted)] hover:text-[color:var(--ink)]" href="#filosofia">Filosofia</a><a class="text-xs text-[color:var(--muted)] hover:text-[color:var(--ink)]" href="#tratamentos">Tratamentos</a><a class="text-xs text-[color:var(--muted)] hover:text-[color:var(--ink)]" href="#resultados">Resultados</a><a class="text-xs text-[color:var(--muted)] hover:text-[color:var(--ink)]" href="#sobre">Sobre</a><a class="text-xs text-[color:var(--muted)] hover:text-[color:var(--ink)]" href="#faq">FAQ</a><a class="text-xs text-[color:var(--muted)] hover:text-[color:var(--ink)]" href="#localizacao">Localização</a>
+      <a href="#filosofia">Filosofia</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <div class="flex items-center gap-2"><a class="btn btn-dark hidden sm:inline-flex" href={whatsappUrl} target="_blank" rel="noreferrer">Agendar avaliação <span aria-hidden="true">↗</span></a><button class="focus-ring grid h-11 w-11 place-items-center border border-[color:var(--line)] lg:hidden" aria-expanded="false" aria-controls="mobile-menu" data-menu-button><span class="sr-only">Abrir menu</span><span class="text-lg">☰</span></button></div>
+
+    <div class="flex items-center gap-2">
+      <a class="btn btn-gold hidden sm:inline-flex" href={whatsappUrl} target="_blank" rel="noreferrer">
+        Agendar
+        <span aria-hidden="true">↗</span>
+      </a>
+      <button
+        class="focus-ring grid h-11 w-11 place-items-center border border-[color:var(--line-dark)] text-[color:var(--ivory)] lg:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-button
+      >
+        <span class="sr-only">Abrir menu</span>
+        <span class="text-lg">☰</span>
+      </button>
+    </div>
   </div>
-  <nav id="mobile-menu" class="container hidden border-t border-[color:var(--line)] py-5 lg:hidden" aria-label="Navegação mobile" data-mobile-menu><div class="grid gap-4"><a href="#filosofia">Filosofia</a><a href="#tratamentos">Tratamentos</a><a href="#resultados">Resultados</a><a href="#sobre">Sobre</a><a href="#faq">FAQ</a><a href="#localizacao">Localização</a><a class="btn btn-dark mt-2 sm:hidden" href={whatsappUrl} target="_blank" rel="noreferrer">Agendar avaliação ↗</a></div></nav>
+
+  <nav
+    id="mobile-menu"
+    class="container hidden border-t border-[color:var(--line-dark)] py-5 lg:hidden"
+    aria-label="Navegação mobile"
+    data-mobile-menu
+  >
+    <div class="grid gap-4">
+      <a href="#filosofia">Filosofia</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-gold mt-2 sm:hidden" href={whatsappUrl} target="_blank" rel="noreferrer">Agendar atendimento ↗</a>
+    </div>
+  </nav>
 </header>
+
 <script>
-  const button = document.querySelector('[data-menu-button]'); const menu = document.querySelector('[data-mobile-menu]');
-  button?.addEventListener('click', () => { const open = button.getAttribute('aria-expanded') === 'true'; button.setAttribute('aria-expanded', String(!open)); menu?.classList.toggle('hidden', open); });
-  menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => { button?.setAttribute('aria-expanded', 'false'); menu?.classList.add('hidden'); }));
-  window.addEventListener('scroll', () => document.querySelector('[data-header]')?.classList.toggle('border-[color:var(--line)]', window.scrollY > 20), { passive: true });
+  const button = document.querySelector('[data-menu-button]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  const header = document.querySelector('[data-header]');
+
+  button?.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!open));
+    menu?.classList.toggle('hidden', open);
+  });
+
+  menu?.querySelectorAll('a').forEach((link) =>
+    link.addEventListener('click', () => {
+      button?.setAttribute('aria-expanded', 'false');
+      menu?.classList.add('hidden');
+    }),
+  );
+
+  window.addEventListener('scroll', () => header?.classList.toggle('is-scrolled', window.scrollY > 20), { passive: true });
 </script>

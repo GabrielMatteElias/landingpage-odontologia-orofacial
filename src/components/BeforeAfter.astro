@@ -1,14 +1,49 @@
 ---
-const before = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=82';
-const after = 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=1200&q=82';
+import { Image } from 'astro:assets';
+import fullFaceResult from '../assets/before_after.webp';
+import lipResult from '../assets/post3.webp';
+
+const results = [
+  {
+    image: fullFaceResult,
+    title: 'Resultado facial',
+    alt: 'Antes e depois de resultado facial realizado pela Dra. Miriam Kuhn',
+  },
+  {
+    image: lipResult,
+    title: 'Resultado labial',
+    alt: 'Antes e depois de resultado labial realizado pela Dra. Miriam Kuhn',
+  },
+];
 ---
-<div class="case-frame" data-case>
-  <img class="photo" src={before} width="1200" height="900" loading="lazy" alt="Retrato de paciente antes da avaliação estética" />
-  <div class="case-after absolute inset-y-0 left-0" data-after><img class="photo" src={after} width="1200" height="900" loading="lazy" alt="Retrato de paciente após planejamento estético personalizado" /></div>
-  <span class="absolute left-4 top-4 bg-[color:var(--paper)] px-3 py-2 text-[.62rem] font-semibold tracking-[.16em]">ANTES</span><span class="absolute right-4 top-4 bg-[color:var(--paper)] px-3 py-2 text-[.62rem] font-semibold tracking-[.16em]">DEPOIS</span>
+
+<div class="results-grid" aria-label="Resultados antes e depois">
+  {
+    results.map((result) => (
+      <figure class="result-card">
+        <div class="result-card__media">
+          <Image
+            class="result-card__image"
+            src={result.image}
+            alt={result.alt}
+            width={992}
+            height={1077}
+            loading="lazy"
+            format="avif"
+            sizes="(min-width: 1100px) 38vw, (min-width: 720px) 46vw, 100vw"
+          />
+          <span class="result-card__label result-card__label--before">ANTES</span>
+          <span class="result-card__label result-card__label--after">DEPOIS</span>
+        </div>
+        <figcaption>
+          <span>{result.title}</span>
+          <small>Resultado individual</small>
+        </figcaption>
+      </figure>
+    ))
+  }
 </div>
-<label class="mt-5 flex items-center gap-4" for="case-slider"><span class="sr-only">Comparar antes e depois</span><span class="eyebrow">Comparar</span><input id="case-slider" class="slider" type="range" min="0" max="100" value="50" aria-label="Controle de comparação antes e depois" data-slider /><span aria-hidden="true">↔</span></label>
-<script>
-  const slider = document.querySelector('[data-slider]'); const after = document.querySelector<HTMLElement>('[data-after]');
-  slider?.addEventListener('input', (event) => { const value = (event.target as HTMLInputElement).value; if (after) after.style.width = `${value}%`; });
-</script>
+
+<p class="mt-6 max-w-2xl text-xs leading-6 text-[color:var(--muted-dark)]">
+  Resultados reais podem variar conforme características individuais, avaliação profissional e plano de tratamento.
+</p>
