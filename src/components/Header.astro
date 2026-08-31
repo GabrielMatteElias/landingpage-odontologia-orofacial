@@ -11,12 +11,7 @@ import logoImg from '../../public/logo.webp'
   <div class="container flex h-[72px] items-center justify-between gap-5">
     <a href="#inicio" class="brand-mark leading-tight" aria-label={`${site.brand}, início`}>
       <span class="brand-monogram">
-        <Image
-          src={logoImg}
-          width={45}
-          alt="Logo Dienifer Hanich"
-          class="rounded-full"
-        />
+        {site.initials}
       </span>
       <span class="hidden sm:block">
         <span class="block serif text-[1.2rem]">{site.brand}</span>
