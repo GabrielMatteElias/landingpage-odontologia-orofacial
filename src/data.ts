@@ -4,19 +4,19 @@ import post3Img from './assets/post3.webp';
 import post4Img from './assets/post4.webp';
 
 export const site = {
-  professional: 'Dra. Miriam Kuhn',
-  brand: 'Miriam Kuhn',
+  professional: 'Dra. Dienifer Hanich',
+  brand: 'Dienifer Hanich',
   clinic: 'Laser Start',
-  initials: 'MK',
-  specialty: 'Estética e bem-estar com propósito',
+  initials: 'DH',
+  specialty: 'Biomédica Esteta',
   positioning: 'Resultados naturais que realçam a sua melhor versão.',
-  whatsapp: '555134074354',
-  phoneDisplay: '(51) 93407-4354',
-  whatsappMessage: 'Olá! Gostaria de agendar um atendimento com a Dra. Miriam Kuhn.',
-  instagram: 'https://www.instagram.com/dra.miriamkuhn',
-  seoTitle: 'Dra. Miriam Kuhn | Estética e bem-estar com propósito',
+  whatsapp: '5551999999999',
+  phoneDisplay: '(51) 99999-9999',
+  whatsappMessage: 'Olá! Gostaria de agendar um atendimento com a Dra. Dienifer Hanich.',
+  instagram: 'https://www.instagram.com/dradieniferhanich',
+  seoTitle: 'Dra. Dienifer Hanich | Biomédica Esteta',
   seoDescription:
-    'Atendimentos em estética facial com a Dra. Miriam Kuhn. Botox, planejamento facial e cuidado voltado a resultados naturais.',
+    'Atendimentos em estética facial com a Dra. Dienifer Hanich. Botox, planejamento facial e cuidado voltado a resultados naturais.',
 };
 
 export const whatsappUrl = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.whatsappMessage)}`;
@@ -46,8 +46,8 @@ export const treatments = [
 
 export const location = {
   googleMapsUrl:
-    'https://www.google.com/local/place/fid/0x951979000d4ba5fb:0xa70b017b7637766b/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DWiWaVch70QXZkRNZ14lLPQ%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D310.353%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFldpV2FWY2g3MFFYWmtSTloxNGxMUFE%3D&sa=X&ved=2ahUKEwjHj8P1pr6WAxVPD7kGHYo1IHYQpx96BAgjEAU',
-  address: 'Rua Dr. Vale, 22 — Moinhos de Vento, Porto Alegre — RS',
+    "https://www.google.com/maps/place/Iguatemi+Porto+Alegre",
+  address: "AV. João Wallig, 1800 - Passo d'Areia, Porto Alegre — RS",
   openingHours: 'Segunda a sexta, 9h às 18h',
 }
 
@@ -89,6 +89,6 @@ export const faqs = [
   ],
   [
     'Como agendo um atendimento?',
-    'O agendamento pode ser feito pelo WhatsApp informado nos canais oficiais da Dra. Miriam Kuhn.',
+    'O agendamento pode ser feito pelo WhatsApp informado nos canais oficiais da Dra. Dienifer Hanich.',
   ],
 ];

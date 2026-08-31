@@ -56,7 +56,7 @@ const schema = {
                         <h1
                             class="serif mt-5 max-w-[640px] text-[clamp(3.25rem,8vw,7.4rem)] leading-[.9]"
                         >
-                            Miriam Kuhn
+                            {site.brand}
                         </h1>
                         <p
                             class="mt-6 max-w-[520px] text-[clamp(1.15rem,2vw,1.55rem)] leading-8 text-[color:var(--champagne)]"
@@ -95,7 +95,7 @@ const schema = {
                         <Image
                             class="photo"
                             src={heroPortrait}
-                            alt="Dra. Miriam Kuhn em retrato profissional"
+                            alt={`${site.professional} em retrato profissional`}
                             width={1024}
                             height={1024}
                             loading="eager"
@@ -243,7 +243,7 @@ const schema = {
                         <Image
                             class="photo"
                             src={profileImg}
-                            alt="Retrato da Dra. Miriam Kuhn"
+                            alt={`Retrato da ${site.professional}`}
                             width={900}
                             height={900}
                             loading="lazy"
@@ -260,7 +260,7 @@ const schema = {
                         <p
                             class="mt-8 text-lg leading-8 text-[color:var(--muted)]"
                         >
-                            A Dra. Miriam Kuhn assina uma estética orientada por
+                            A Dra. Dienifer Hanich assina uma estética orientada por
                             bem-estar, naturalidade e intenção. O foco do
                             atendimento é entender o que cada rosto pede antes
                             de indicar qualquer procedimento.
@@ -333,7 +333,7 @@ const schema = {
                             <h2
                                 class="serif mt-5 text-5xl leading-none md:text-7xl"
                             >
-                                Acompanhe o trabalho da Miriam.
+                                Acompanhe o trabalho da Dienifer.
                             </h2>
                             <p
                                 class="mt-6 max-w-md leading-7 text-[color:var(--muted-dark)]"
@@ -351,7 +351,7 @@ const schema = {
                     </div>
                     <div
                         class="post-gallery mt-14"
-                        aria-label="Galeria de posts da Dra. Miriam Kuhn"
+                        aria-label={`Galeria de posts da ${site.professional}`}
                     >
                         {
                             posts.map(({ image, alt }) => (
